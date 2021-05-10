@@ -1,0 +1,217 @@
+@charset "UTF-8";
+
+/* 로고, 메인 컬러 : #002866; / 풋터 로고 : #707070*/
+
+/* 전체 페이지 초기화 영역*/
+*{
+    margin:0; padding:0; box-sizing:border-box; 
+    font-size: 14px;
+    letter-spacing:-1px; color:#333333;
+    list-style:none; text-decoration:none
+}
+    
+.wrap{
+    width:1000px; margin: 0 auto;
+}
+/*헤더*/
+header{
+    float:left;
+    width:150px; height:100%;
+}
+
+header .logo{
+    width:150px; height:100px;
+    background: url(../images/logo.png) no-repeat 0 50%;text-indent: -9999px;
+    cursor: pointer;
+}
+header nav{
+    width:150px; height:550px;
+ }
+
+
+/*메뉴*/
+    nav>.main_menu>li>a{ 
+        display: block; height: 50px; line-height: 50px; letter-spacing: 5px; 
+        color: #002866;
+    } 
+    .main_menu li{
+        float: left;
+        width:150px; height:50px; 
+        text-align:center; line-height:50px;background:white;
+    }
+    .main_menu li .sub_menu{
+        width:150px; 
+        z-index: 50;
+    }
+    .main_menu li .sub_menu li{
+        width:150px;  color:white;
+        background: #002866;
+    }
+    .sub_menu{ 
+        display: none; position: relative; 
+        left: 150px; top: -60px;
+        width: 150px; height: 124px; 
+        background: #002866; color:#fff;
+    } 
+    .sub_menu>li>a{
+        display: block; height: 31px;
+        color: #fff; text-align: center;
+    }
+    nav>.main_menu>li:hover>a{
+        color: #fff; background: #002866;
+        font-weight: bold;
+    }
+     .sub_menu>li:hover>a{
+        color: #fff;
+        font-weight: bold;
+       }
+
+
+/*슬라이드*/
+.slide{
+    position: relative;
+    overflow: hidden;
+    height: 350px;
+    background:  #002866;
+
+}
+.slide ul{
+    display: flex;
+    position: absolute;top: 0;left: 0;
+}
+.slide img{
+    display: block;
+}
+
+
+/*메인 공통*/
+.main{
+    display: flex;
+    justify-content: space-between;
+    float:left;
+    width:850px; height:200px;
+}
+.main .title{
+    width:100%; height:50px;
+    line-height:50px;font-size:16pt; font-weight:bold;
+    text-indent:5px; letter-spacing:-2px;
+    border-bottom:1px solid #002866;
+}
+
+
+/*메인 공지사항*/
+.main .notice{
+    float:left;
+    width:32%; height:200px;
+    
+}
+.cont{
+    margin: 18px 0;
+}
+
+/*메인 갤러리*/
+.main .gallery{
+    float:left;
+    width:32%; height:200px;
+}
+.main .gallery .contents {
+    text-align:center;line-height:150px;
+}
+.main .gallery .contents img{
+    vertical-align:middle; 
+    width: 88px; height: 88px;
+}
+
+/*메인 바로가기*/
+.main .lst-goto{
+    float:left;
+    width:32%; height:200px;
+}
+.lst-goto .title{
+    text-indent: -9999px;
+    border: none;
+}
+.lst-goto .goto ul{
+    display: flex; flex-wrap: wrap;
+    justify-content: space-between;    
+    align-content: space-between;
+}
+.goto a{
+    position: relative; top: -41px; left: 0;
+    display: flex;
+    justify-content: center; align-items: center;
+    height: 80px;
+    width: 130px;
+    background:#eee; 
+    border-radius: 11px;
+    margin: 5px 0 5px 0;
+}
+
+
+/* 풋터 */
+footer{
+    display: flex; justify-content: space-between;
+    height: 100px; padding: 0 20px;
+    background:#eee;
+    }
+footer h1{
+    display: flex; align-items: center;
+    }
+footer h1 a{
+    width: 159px; height: 39px;
+    background: url(../images/footer_logo.png) no-repeat 0 0;
+    text-indent: -9999px;
+}
+footer .copyright{
+    display: flex; align-items: center;
+ }
+footer .family-site{
+    display: flex; align-items: center;
+}
+footer .family-site a{
+    padding-left: 10px;
+}
+
+/* 모달창 */
+#modal {
+    display: none; 
+    justify-content: center; align-items: center;
+    position: fixed;top: 0;left: 0;right: 0;bottom: 0;
+    background-color: rgba(0,0,0,.7);
+}
+#modal .box {
+    position: relative;
+    width: 500px; height: 500px; 
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    text-align: center;
+}
+#modal .modal-title{
+    font-size: 2em;
+    font-weight: bold;
+}
+.txt{
+    margin: 90px;
+}
+#modal .btn-close {
+    position: absolute;top: -20px;right: -20px;
+    width: 70px; height: 70px; 
+    border-radius: 50%; border: none;
+    background: #002866; 
+    cursor: pointer;
+}
+#modal .btn-close::before {
+    content: "\f00d";
+    font-family: 'Line Awesome Free';
+    font-weight: 900;
+    font-size: 2em;
+    color: #fff;
+}
+.blind{
+    display: block;
+    overflow: hidden; 
+    width: 0; height: 0;
+    text-indent: -9999px; line-height: 0;
+}
+
