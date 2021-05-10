@@ -11,7 +11,7 @@
 }
     
 .wrap{
-    width:1000px; margin: 0 auto;
+    width:1000px;
 }
 /*헤더*/
 header{
@@ -40,8 +40,7 @@ header nav{
         text-align:center; line-height:50px;background:white;
     }
     .main_menu li .sub_menu{
-        width:150px; 
-        z-index: 50;
+        width:150px;
     }
     .main_menu li .sub_menu li{
         width:150px;  color:white;
@@ -52,6 +51,7 @@ header nav{
         left: 150px; top: -60px;
         width: 150px; height: 124px; 
         background: #002866; color:#fff;
+        z-index: 50;
     } 
     .sub_menu>li>a{
         display: block; height: 31px;
